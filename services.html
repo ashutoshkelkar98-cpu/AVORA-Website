@@ -174,6 +174,24 @@ footer{background:#FAFAF8;color:#000}.footer-bottom{color:#5C666B}
 /* Services hero: more balanced editorial heading scale */
 .services-hero h1{font-size:clamp(3rem,5.2vw,5.75rem);line-height:1.09}
 @media(max-width:560px){.services-hero h1{font-size:clamp(2.6rem,9vw,3.5rem)}}
+
+/* Services hero: restrained staggered entrance and accent detail */
+.services-hero .eyebrow{display:inline-flex;align-items:center;gap:14px}
+.services-hero .eyebrow::after{content:"";display:block;width:38px;height:1px;background:#2989B8;transform-origin:left center}
+.services-hero em{transition:text-shadow .55s ease}
+.services-hero:hover em{text-shadow:0 0 26px rgba(168,216,240,.26)}
+@media(prefers-reduced-motion:no-preference){
+ .services-hero.hero-motion-ready .eyebrow,
+ .services-hero.hero-motion-ready h1,
+ .services-hero.hero-motion-ready .lead{opacity:0;transform:translateY(17px)}
+ .services-hero.hero-motion-ready.hero-motion-visible .eyebrow{animation:avoraHeroIn .7s cubic-bezier(.2,.7,.2,1) .08s both}
+ .services-hero.hero-motion-ready.hero-motion-visible h1{animation:avoraHeroIn .95s cubic-bezier(.2,.7,.2,1) .22s both}
+ .services-hero.hero-motion-ready.hero-motion-visible .lead{animation:avoraHeroIn .8s cubic-bezier(.2,.7,.2,1) .52s both}
+ .services-hero.hero-motion-ready.hero-motion-visible .eyebrow::after{animation:avoraHeroRule .75s ease .65s both}
+ @keyframes avoraHeroIn{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+ @keyframes avoraHeroRule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+@media(prefers-reduced-motion:reduce){.services-hero em{transition:none}}
 </style></head><body>
 <header class="header" id="top"><a href="index.html#home" class="brand">avora<span>.</span></a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav"><a href="index.html#home">Home</a><a href="services.html" aria-current="page">Services</a><a href="index.html#work">Our Work</a><a href="index.html#process">How We Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><a class="nav-cta" href="#start">LET'S TALK</a></nav></header>
 <main>
@@ -191,4 +209,18 @@ footer{background:#FAFAF8;color:#000}.footer-bottom{color:#5C666B}
 <div class="outcome-grid"><div class="outcome"><span>01 / DISCOVERY</span><h3>Be easier to find</h3><p>Give potential customers a clear place to discover your business and explore what you offer.</p></div><div class="outcome"><span>02 / CONFIDENCE</span><h3>Explain your value</h3><p>Present services, products, and essential information in a consistent, credible way.</p></div><div class="outcome"><span>03 / ACTION</span><h3>Make contact simpler</h3><p>Help visitors enquire, request information, or take the next step with less friction.</p></div></div></section>
 <section class="services-cta section" id="start"><p class="eyebrow">LET'S TALK</p><h2>Tell us what you're<br>trying to <em>achieve.</em></h2><p>You don't need a complete brief. Start with your business, your challenge, or an idea—and we'll discuss whether our services are a fit before proposing any work.</p><a class="btn" href="mailto:hello@example.com?subject=AVORA%20Services%20Enquiry">DISCUSS YOUR PROJECT</a><p class="contact-note">Prototype contact address — to be replaced before public launch. Advertising spend and management fees are quoted separately; results are not guaranteed.</p></section>
 </main><footer><div><a href="index.html#home" class="brand">avora<span>.</span></a><p>Practical digital services, clear expectations and collaborative work.</p></div><div><h4>NAVIGATION</h4><a href="index.html#home">Home</a><a href="services.html">Services</a><a href="index.html#work">Our Work</a><a href="index.html#about">About</a></div><div><h4>EXPLORE</h4><a href="#what-we-do">What We Do</a><a href="#how-we-do-it">How We Do It</a><a href="#benefits">How It Helps</a></div><div class="footer-bottom">© <span id="year"></span> AVORA. Working brand name. <span>BUILT WITH PURPOSE.</span></div></footer>
-<script>const menu=document.querySelector('.menu'),nav=document.getElementById('nav');menu.addEventListener('click',()=>{const active=nav.classList.toggle('active');menu.setAttribute('aria-expanded',String(active))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('active');menu.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();(function(){const grid=document.querySelector('.pipeline-grid');if(!grid||window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;const cards=[...grid.querySelectorAll('.pipeline-step')];cards.forEach((card,i)=>card.style.setProperty('--carriage-delay',((cards.length-1-i)*130)+'ms'));grid.classList.add('carriages-ready');let running=false,resetTimer=null;const observer=new IntersectionObserver(entries=>{const visible=entries[0].isIntersecting;if(visible&&!running){running=true;clearTimeout(resetTimer);grid.classList.remove('carriages-arriving');void grid.offsetWidth;grid.classList.add('carriages-arriving')}else if(!visible&&running){running=false;resetTimer=setTimeout(()=>{if(!running)grid.classList.remove('carriages-arriving')},80)}},{threshold:.12,rootMargin:'0px 0px -8% 0px'});observer.observe(grid)})();</script></body></html>
+<script>const menu=document.querySelector('.menu'),nav=document.getElementById('nav');menu.addEventListener('click',()=>{const active=nav.classList.toggle('active');menu.setAttribute('aria-expanded',String(active))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('active');menu.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();(function(){const grid=document.querySelector('.pipeline-grid');if(!grid||window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;const cards=[...grid.querySelectorAll('.pipeline-step')];cards.forEach((card,i)=>card.style.setProperty('--carriage-delay',((cards.length-1-i)*130)+'ms'));grid.classList.add('carriages-ready');let running=false,resetTimer=null;const observer=new IntersectionObserver(entries=>{const visible=entries[0].isIntersecting;if(visible&&!running){running=true;clearTimeout(resetTimer);grid.classList.remove('carriages-arriving');void grid.offsetWidth;grid.classList.add('carriages-arriving')}else if(!visible&&running){running=false;resetTimer=setTimeout(()=>{if(!running)grid.classList.remove('carriages-arriving')},80)}},{threshold:.12,rootMargin:'0px 0px -8% 0px'});observer.observe(grid)})();</script><script>
+/* Trigger only when visible; works whether or not the introductory curtain is shown. */
+(function(){
+ const hero=document.querySelector('.services-hero');
+ if(!hero||window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+ const observer=new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting){
+   hero.classList.add('hero-motion-visible');
+   observer.disconnect();
+  }
+ },{threshold:.12});
+ hero.classList.add('hero-motion-ready');
+ observer.observe(hero);
+})();
+</script></body></html>
