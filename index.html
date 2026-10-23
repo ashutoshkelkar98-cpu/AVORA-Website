@@ -211,9 +211,28 @@ footer p,.footer-bottom{color:#52647B}
 @keyframes journey-arrow{0%,47%{opacity:.35;transform:translateX(-4px)}54%,76%{opacity:1;transform:translateX(3px);color:#C7F23A}87%,100%{opacity:.35;transform:translateX(0);color:#A8D8F0}}
 @media(max-width:600px){.hero-journey{padding:15px}.journey-stage{padding:12px}.journey-stage-title strong{font-size:14px}.journey-browser-body{padding:12px}.journey-picture{min-height:90px}.journey-flow>div{padding:10px 2px}.journey-flow small{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.hero-journey *, .hero-journey *::before,.hero-journey *::after{animation:none!important;transition:none!important}.journey-browser-body .journey-logo,.journey-browser-body .journey-navlinks,.journey-browser-body .journey-heading,.journey-browser-body .journey-line,.journey-browser-body .journey-cta,.journey-browser-body .journey-picture{opacity:1!important;transform:none!important}.journey-flow>div{opacity:1!important;transform:none!important}.journey-check{opacity:1!important}}
+</style><style>
+/* Narrated digital journey: 20s, six clearly labeled steps */
+.hero-journey{--journey-duration:20s}
+.journey-narration{height:69px;position:relative;margin-bottom:14px;overflow:hidden}
+.journey-bubble{position:absolute;inset:2px 0 auto;display:flex;flex-direction:column;gap:5px;max-width:100%;padding:10px 14px 11px;border-radius:11px;border:1px solid rgba(168,216,240,.5);background:linear-gradient(105deg,#24466C,#1B3555);box-shadow:0 7px 22px rgba(0,0,0,.18);color:#F5F7FA;font:500 12px/1.35 "Google Sans",Arial,sans-serif;opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;animation:journey-caption 20s ease-in-out infinite}
+.journey-bubble b{font-size:10px;line-height:1;letter-spacing:.1em;color:#C7F23A;font-weight:700}
+.journey-bubble-1{animation-delay:0s}.journey-bubble-2{animation-delay:3.33s}.journey-bubble-3{animation-delay:6.66s}.journey-bubble-4{animation-delay:9.99s}.journey-bubble-5{animation-delay:13.32s}.journey-bubble-6{animation-delay:16.65s}
+@keyframes journey-caption{0%,1%{opacity:0;transform:translateY(12px) scale(.97)}1.6%,11.8%{opacity:1;transform:translateY(0) scale(1)}15%,100%{opacity:0;transform:translateY(-7px) scale(.99)}}
+.journey-head{margin-bottom:12px}
+@media(max-width:600px){.journey-narration{height:80px}.journey-bubble{font-size:11px;padding:9px 11px}.journey-bubble b{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.journey-narration{height:auto;min-height:58px}.journey-bubble{display:none;animation:none!important}.journey-bubble-1{display:flex;position:relative;opacity:1;transform:none}}
 </style></head><body>
 <header class="header" id="home"><a href="#home" class="brand brand-header" aria-label="Akarshify — Attraction Automated"><span class="brand-name">akarshify<span>.</span></span><span class="brand-tagline">ATTRACTION AUTOMATED</span></a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav"><a href="services.html">Services</a><a href="#work">Our Work</a><a href="#process">How We Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">LET'S TALK</a></nav></header>
 <main><section class="hero section"><div><p class="eyebrow">WELCOME TO AKARSHIFY</p><h2>Your business,<br><em>better connected.</em></h2><p class="lead">We design and develop websites that showcase your business, and create digital advertising campaigns to help you reach more people online.</p><div class="actions"><a href="services.html" class="btn">EXPLORE OUR SERVICES</a><a href="#contact" class="btn outline">DISCUSS YOUR PROJECT</a></div></div><div class="hero-journey" aria-label="Illustration of website development and digital advertising working together">
+<div class="journey-narration" aria-hidden="true">
+<span class="journey-bubble journey-bubble-1"><b>01 / PLAN</b>Your digital presence takes shape.</span>
+<span class="journey-bubble journey-bubble-2"><b>02 / BUILD</b>Design, content and functionality come together.</span>
+<span class="journey-bubble journey-bubble-3"><b>03 / READY</b>Your business has a place online.</span>
+<span class="journey-bubble journey-bubble-4"><b>04 / CAMPAIGN</b>We prepare ads for your intended audience.</span>
+<span class="journey-bubble journey-bubble-5"><b>05 / REACH</b>Your campaign introduces your business to more people.</span>
+<span class="journey-bubble journey-bubble-6"><b>06 / DISCOVER</b>Interested visitors can explore what you offer.</span>
+</div>
 <div class="journey-head"><span class="journey-pulse"></span><span>AKARSHIFY / DIGITAL SERVICES</span><span class="journey-live">● IN MOTION</span></div>
 <div class="journey-stage journey-build"><div class="journey-stage-title"><span class="journey-icon" aria-hidden="true">⌘</span><div><strong>Website Development</strong><small>Create your digital presence</small></div><span class="journey-check" aria-hidden="true">✓</span></div>
 <div class="journey-browser"><div class="journey-browser-bar"><i></i><i></i><i></i><span>yourbusiness.com</span></div><div class="journey-browser-body"><div class="journey-nav"><span class="journey-logo"></span><span class="journey-navlinks"></span></div><div class="journey-content"><div class="journey-copy"><span class="journey-heading"></span><span class="journey-line"></span><span class="journey-line short"></span><span class="journey-cta"></span></div><div class="journey-picture"><span></span></div></div></div></div></div>
