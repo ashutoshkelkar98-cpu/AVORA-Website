@@ -295,6 +295,34 @@ footer p,.footer-bottom{color:#52647B}
 .service-grid .service-card:nth-child(2) .service-info p{color:#F5F7FA!important}
 .service-grid .service-card:nth-child(2) .service-info a{color:#F5F7FA!important;border-color:rgba(245,247,250,.72)!important}
 .service-grid .service-card:nth-child(2) .service-info a:hover{background:#F5F7FA!important;color:#0B1426!important}
+</style><style>
+/* Portfolio refresh — unified midnight/ice-blue gallery, original carousel preserved */
+#work .portfolio-showcase{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:0;background:#101C30;color:#F5F7FA;border:1px solid rgba(168,216,240,.2);border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(11,20,38,.12)}
+#work .portfolio-stage{min-height:510px;background:radial-gradient(ellipse at 47% 43%,rgba(74,130,196,.2),transparent 58%),linear-gradient(145deg,#1B3049,#0B1426);border-right:1px solid rgba(168,216,240,.14);isolation:isolate}
+#work .portfolio-stage:before{content:"";position:absolute;inset:20px;border:1px solid rgba(168,216,240,.13);border-radius:13px;pointer-events:none;z-index:0}
+#work .portfolio-stage:after{content:"PROJECT PREVIEW";position:absolute;left:38px;top:34px;font-size:10px;font-weight:600;letter-spacing:.17em;color:#A8D8F0;z-index:5;pointer-events:none}
+#work .portfolio-card{inset:16% 11% 12%;transition:transform .68s cubic-bezier(.22,1,.36,1),opacity .55s ease;filter:drop-shadow(0 22px 28px rgba(0,0,0,.25))}
+#work .portfolio-card.active{transform:translate3d(0,0,0) scale(1);opacity:1}
+#work .portfolio-card.next{transform:translate3d(55%,1%,-210px) rotateY(-9deg) scale(.78);opacity:.24}
+#work .portfolio-card.back{transform:translate3d(-55%,1%,-210px) rotateY(9deg) scale(.78);opacity:.16}
+#work .mini-browser{border-radius:10px;box-shadow:0 18px 44px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.2)}
+#work .portfolio-copy{min-height:510px;padding:clamp(30px,4.5vw,70px);background:linear-gradient(145deg,#101C30,#14263F);justify-content:center}
+#work .portfolio-index{color:#A8D8F0;font-size:.7rem;letter-spacing:.15em;font-weight:600}
+#work .portfolio-title{color:#F5F7FA;font-size:clamp(2rem,3.5vw,3.6rem);line-height:1.1;margin:1.2rem 0 1.4rem;overflow-wrap:anywhere}
+#work .portfolio-summary{color:#D9E4EF;font-size:clamp(.92rem,1.05vw,1.04rem);line-height:1.75}
+#work .portfolio-type{color:#A8D8F0;font-size:.8rem;line-height:1.5;margin:1.1rem 0 1.5rem}
+#work .portfolio-link{color:#C7F23A!important;text-decoration:none;font-weight:650;letter-spacing:.08em}
+#work .portfolio-link:hover{color:#F5F7FA!important}
+#work .portfolio-controls{gap:13px;margin-top:1.8rem}
+#work .portfolio-controls button{width:auto;min-width:66px;height:40px;padding:0 14px;border:1px solid rgba(168,216,240,.43);border-radius:999px;background:rgba(168,216,240,.06);color:#F5F7FA;font-family:"Google Sans",Arial,sans-serif;font-size:.7rem;font-weight:650;letter-spacing:.05em;transition:background .2s,border-color .2s,color .2s}
+#work .portfolio-controls button:hover{background:#A8D8F0;border-color:#A8D8F0;color:#0B1426}
+#work .portfolio-dots{gap:7px}
+#work .portfolio-dots span{background:#526D89;border-radius:999px;height:5px;width:9px}
+#work .portfolio-dots span.current{background:#C7F23A;width:27px}
+#work .portfolio-note{color:#A9B9C9;font-size:.71rem;line-height:1.6;margin-top:1.4rem}
+@media(max-width:900px){#work .portfolio-showcase{grid-template-columns:1fr}#work .portfolio-stage{min-height:390px;border-right:0;border-bottom:1px solid rgba(168,216,240,.14)}#work .portfolio-card{inset:15% 14% 9%}#work .portfolio-copy{min-height:0;padding:35px}}
+@media(max-width:540px){#work .portfolio-showcase{border-radius:16px}#work .portfolio-stage{min-height:285px}#work .portfolio-stage:before{inset:11px}#work .portfolio-stage:after{left:22px;top:20px;font-size:8px}#work .portfolio-card{inset:18% 9% 8%}#work .portfolio-copy{padding:27px 22px}#work .portfolio-title{font-size:2.15rem}#work .portfolio-controls{gap:10px}}
+@media(prefers-reduced-motion:reduce){#work .portfolio-card{transition:none!important}}
 </style></head><body>
 <header class="header" id="home"><a href="#home" class="brand brand-header" aria-label="Akarshify — Attraction Automated"><span class="brand-name">akarshify<span>.</span></span><span class="brand-tagline">ATTRACTION AUTOMATED</span></a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav"><a href="services.html">Services</a><a href="#work">Our Work</a><a href="#process">How We Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">LET'S TALK</a></nav></header>
 <main><section class="hero section"><div><p class="eyebrow">WELCOME TO AKARSHIFY</p><h2>Your business,<br><em>better connected.</em></h2><p class="lead">We create professional landing pages that establish your business online and develop targeted advertising campaigns that help you reach wider audiences, increase visibility, and connect with potential customers.</p><div class="actions"><a href="services.html" class="btn">EXPLORE OUR SERVICES</a><a href="#contact" class="btn outline">DISCUSS YOUR PROJECT</a></div></div><div class="hero-journey" aria-label="Illustration of website development and digital advertising working together">
