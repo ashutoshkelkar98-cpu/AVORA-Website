@@ -278,7 +278,19 @@ h1{font-size:clamp(2.6rem,4.1vw,4.65rem)!important;line-height:1.1}
 h2{font-size:clamp(2.1rem,3.6vw,3.8rem)!important;line-height:1.13}
 h3{font-size:clamp(1.35rem,2vw,2.1rem)!important}
 @media(max-width:600px){h1{font-size:clamp(2.15rem,8vw,3.15rem)!important}h2{font-size:clamp(1.9rem,7vw,2.65rem)!important}}
-</style></head><body>
+</style><style>
+/* Restore editorial heading typography and unify emphasized blue */
+:root{--heading-accent-blue:#A8D8F0}
+h1,h2,h3,h4,h5,h6,
+h1 em,h2 em,h3 em,h4 em,h5 em,h6 em,
+.hero h1,.hero h2,.section-heading h2,.section-intro h2,
+.portfolio-title,.service-info h3,.process-quote h3{
+  font-family:"Playfair Display",Georgia,serif!important;
+  text-transform:none!important;
+  letter-spacing:-.035em;
+}
+h1 em,h2 em,h3 em,h4 em,h5 em,h6 em{color:var(--heading-accent-blue)!important}
+</style><style>h1{font-size:clamp(2.85rem,4.6vw,5.2rem)!important}h2{font-size:clamp(2.3rem,3.8vw,4.1rem)!important}@media(max-width:600px){h1{font-size:clamp(2.3rem,8vw,3.4rem)!important}h2{font-size:clamp(2rem,7vw,2.8rem)!important}}</style></head><body>
 <header class="header" id="top"><a href="index.html#home" class="brand brand-header" aria-label="Akarshify — Attraction Automated"><span class="brand-name">akarshify<span>.</span></span><span class="brand-tagline">ATTRACTION AUTOMATED</span></a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav"><a href="index.html#home">Home</a><a href="services.html" aria-current="page">Services</a><a href="index.html#work">Our Work</a><a href="index.html#process">How We Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><a class="nav-cta" href="#start">LET'S TALK</a></nav></header>
 <main>
 <section class="services-hero section"><div><p class="eyebrow">OUR SERVICES</p><h1>Thoughtful digital<br>solutions, <em>built around you.</em></h1></div><div><p class="lead">From your first website to reaching new audiences, we help you build a clearer digital presence—with practical deliverables and no unnecessary complexity.</p></div></section>
